@@ -1,0 +1,23 @@
+body {
+  background-image: url("http://i.imgur.com/x1GhsAz.jpg"), url("http://i.imgur.com/NKAcL28.jpg");
+  font-family: futura;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+div.dice{
+  float: left;
+  width: 32px;
+  background: #F5F5F5;
+  border: #999 1px solid;
+  font-size: 24px;
+  text-align: center;
+  margin: 3px;
+}
+
+div.marker1{
+  background: pink;
+  width: 32px;
+  float: center;
+}
