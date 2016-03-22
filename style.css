@@ -6,6 +6,11 @@ body {
   background-position: center;
 }
 
+#player {
+background: url("http://i.imgur.com/9nPTWsT.jpg?1");
+background-repeat: no-repeat;
+}
+
 div.dice{
   float: left;
   width: 32px;
@@ -21,3 +26,78 @@ div.marker1{
   width: 32px;
   float: center;
 }
+
+.squares {
+  height: 100px;
+  width: 100px;
+  float: left;
+}
+
+#container {
+  position: absolute;
+}
+
+#square1 {
+  background-color: red;
+}
+
+#square2 {
+  background-color: blue;
+}
+
+#square3 {
+  background-color: red;
+}
+
+#square4 {
+  background-color: blue;
+}
+
+#square5{
+  background-color: red;
+}
+
+#square6{
+  background-color: blue;
+}
+
+#square7{
+  background-color: red;
+}
+
+#square8{
+  background-color: blue;
+}
+
+#square9{
+  background-color: pink;
+}
+
+#square10{
+  background-color: green;
+}
+
+#square11{
+  background-color: pink;
+}
+
+#square12{
+  background-color: green;
+  f
+}
+
+#square13{
+  background-color: pink;
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
