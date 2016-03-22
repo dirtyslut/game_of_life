@@ -28,16 +28,13 @@ div.marker1{
 }
 
 .squares {
-    height: 100px;
-    width: 100px;
+  height: 100px;
+  width: 100px;
+  float: left;
 }
 
 #container {
-    float: auto;
-}
-
-#container2 {
-  float: auto;
+  position: absolute;
 }
 
 #square1 {
@@ -54,25 +51,51 @@ div.marker1{
 
 #square4 {
   background-color: blue;
-  float: left;
 }
 
 #square5{
   background-color: red;
-  float: left;
 }
 
 #square6{
   background-color: blue;
-  float: left;
 }
 
 #square7{
   background-color: red;
-  float: left;
 }
 
 #square8{
   background-color: blue;
-  float: left;
 }
+
+#square9{
+  background-color: pink;
+}
+
+#square10{
+  background-color: green;
+}
+
+#square11{
+  background-color: pink;
+}
+
+#square12{
+  background-color: green;
+}
+
+#square13{
+  background-color: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
