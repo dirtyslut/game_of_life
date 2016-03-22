@@ -25,7 +25,7 @@ function rollDice(){
   if(d1 === d2 ){
     status.innerHTML += " DOUBLES! You get a FREE TURN!";
   }
-  player1.position = diceTotal;
+  player1.position += diceTotal;
 }
 
 // player placement
