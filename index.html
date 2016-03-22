@@ -2,31 +2,42 @@
 <html>
 <head>
   <title>Game of Life</title>
-  <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
   <body>
 
+  <button id="start">Start</button>
+    <div id="player"></div>
+
     <div id="die1" class="dice">0</div>
     <div id="die2" class="dice">0</div>
-    <button onclick="rollDice()">Roll Dice</button>
-    <button onclick="moveNow()">Move now</button>
+
+    <button id="roll">Roll Dice</button>
+    <button id="move">Move now</button>
 
     <h2 id="status" style="clear:left;"></h2>
 
-    <div id="marker1"></div>
+    <div id="marker1">
 
-    <div id="container">
-        <div class="squares" id="square1"></div>
-        <div class="squares" id="square2"></div>
-        <div class="squares" id="square3"></div>
-        <div class="squares" id="square4"></div>
     </div>
 
+    <div id="container">
+      <div class="squares" id="square1"></div>
+      <div class="squares" data-goBackward="true" id="square2"></div>
+      <div class="squares" id="square3"></div>
+      <div class="squares" id="square4"></div>
+    </div>
 
-    <script src='app.js'></script>
+    <div id="container2">
+      <div class="squares" id="square5"></div>
+      <div class="squares" id="square6"></div>
+      <div class="squares" id="square7"></div>
+      <div class="squares" id="square8"></div>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 
 </html>

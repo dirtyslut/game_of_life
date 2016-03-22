@@ -1,6 +1,6 @@
-console.log('it works i guess');
+console.log('it works!');
 
-var player1 = {
+var playerData = {
   name: 'Allie',
   icon: 'img',
   position: 0,
@@ -8,41 +8,60 @@ var player1 = {
 };
 
 function randomNumber() {
-  return Math.floor(Math.random() * 6) + 1;
+  return Math.floor(Math.random() * 2) + 1;
 }
 
 function rollDice(){
-  var die1 = document.getElementById('die1'); // jquery selecting
-  var die2 = document.getElementById('die2'); // regular dom
-  var status = document.getElementById('status');
+  var $die1 = $('#die1');
+  var $die2 = $('#die2');
+  var $status = $('#status');
   var d1 = randomNumber();
   var d2 = randomNumber();
   // making diceTotal global so we can reference it in other functions
   diceTotal = d1 + d2;
-  die1.innerHTML = d1;
-  die2.innerHTML = d2;
-  status.innerHTML = "You rolled "+diceTotal+".";
+  $die1.text(d1);
+  $die2.text(d2);
+  var message = "You rolled " + diceTotal + ".";
   if(d1 === d2 ){
-    status.innerHTML += " DOUBLES! You get a FREE TURN!";
+    message += " DOUBLES! You get a FREE TURN!";
   }
-  player1.position += diceTotal;
+  $status.text(message);
+  // target #player, change it's position
+  // to whichever square equals the player1 position
+  playerData.position += diceTotal;
+
+  var player = $('#player');
+  var index = playerData.position - 1;
+  $squares = $('.squares');
+  // if greater than the amount you can move
+  if ( $squares.length > index ) {
+    $square = $squares.eq( index );
+
+    if ($square.data().goBackward) {
+      console.log('go backward');
+    }
+    $square.append(player);
+  } else {
+    console.log("you can't move any further");
+  }
 }
+
+$('#start').on('click', function() {
+  playerData.name = window.prompt('Enter Name');
+  $('#player').text(playerData.name);
+});
+// for player one's dicetotal, move player to square ___
+// correspond squares to number rolled from dice
+
 
 // player placement
 // icon
 // player name
 // player last roll
 
-
-
-$(document).ready(function(){
-    $("marker1").click(function(){
-        $("div").animate({
-            left: '250px',
-            height: '+=150px',
-            width: '+=150px'
-        });
-    });
+$('#roll').on('click', function(event){
+  console.log('clicked on roll');
+  rollDice();
 });
 
 
