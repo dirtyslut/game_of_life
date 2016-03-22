@@ -1,4 +1,4 @@
-console.log('it works!');
+console.log('it is a working thing!');
 
 var playerData = {
   name: 'Allie',
