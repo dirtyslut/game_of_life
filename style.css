@@ -11,6 +11,11 @@ background: url("http://i.imgur.com/9nPTWsT.jpg?1");
 background-repeat: no-repeat;
 }
 
+#player2 {
+background: url("http://i.imgur.com/9nPTWsT.jpg?1");
+background-repeat: no-repeat;
+}
+
 div.dice{
   float: left;
   width: 32px;
@@ -19,12 +24,6 @@ div.dice{
   font-size: 24px;
   text-align: center;
   margin: 3px;
-}
-
-div.marker1{
-  background: pink;
-  width: 32px;
-  float: center;
 }
 
 .squares {
