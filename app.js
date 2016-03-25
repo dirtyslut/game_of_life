@@ -121,7 +121,6 @@ var checkTrap = function () {
       alert('go back 2 spaces');
       move(player2Data, -2);
     }
-
   }
 };
 
