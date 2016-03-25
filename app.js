@@ -1,5 +1,30 @@
 console.log('it is a working thing!');
 
+
+$('#start').on('click', function() {
+   playerData.name = window.prompt('First Player Enter Name');
+   $('#player').text(playerData.name);
+  });
+
+$('#start2').on('click', function() {
+  player2Data.name = window.prompt('Second Player Enter Name');
+  $('#player2').text(player2Data.name);
+  });
+
+var gameStart = false;
+
+$('#startGame').on('click', function() {
+  if (!gameStart) {
+  console.log(playerData.position);
+  playerData.position = 1;
+  player2Data.position = 1;
+  $('#square1').append(playerData.piece);
+  $('#square1').append(player2Data.piece);
+  gameStart = true;
+  }
+
+});
+
 var playerData = {
   name: 'Allie',
   icon: 'img',
@@ -16,6 +41,9 @@ var player2Data = {
   piece: $('#player2')
 };
 
+
+var trap = [5, 10, 17, 28, 33, 49];
+
 var player = $('#player');
 var $squares = $('.squares');
 var player2 = $('#player2');
@@ -24,43 +52,36 @@ var $squares = $('.squares');
 // if greater than the amount you can move
 
 
-$('#start').on('click', function() {
-   playerData.name = window.prompt('First Player Enter Name');
-   $('#player').text(playerData.name);
-  });
-
-$('#start2').on('click', function() {
-  player2Data.name = window.prompt('Second Player Enter Name');
-  $('#player2').text(player2Data.name);
-  });
-
-
 $('#roll').on('click', function(event){
   console.log('clicked on roll');
   rollDice();
 });
 
 function randomNumber() {
-  return Math.floor(Math.random() * 2) + 1;
+  return Math.floor(Math.random() * 3) + 1;
 }
 
-var counter = 0;
+
+var counter = 1;
 
 var move = function(player, diceTotal) {
   var index = player.position - 1;
   console.log('working');
-  console.log($squares, index);
+  // console.log($squares, index);
   if ( $squares.length > index ) {
+    player.position += diceTotal;
+    index = player.position - 1;
     $square = $squares.eq( index );
     $square.append(player.piece);
-    player.position += diceTotal;
   } else {
     console.log("you can't move any further");
   }
   counter++;
 };
 
+
 function rollDice(){
+  console.log(counter);
   var $die1 = $('#die1');
   var $die2 = $('#die2');
   var $status = $('#status');
@@ -71,16 +92,39 @@ function rollDice(){
   $die1.text(d1);
   $die2.text(d2);
   var message = "You rolled " + diceTotal + ".";
-  if(d1 === d2 ){
-    message += " DOUBLES! You get a FREE TURN!";
-  }
   if (counter%2 === 0) {
-    move(player2Data, diceTotal);
-  } else {
+    if(d1 === d2 ) {
+    console.log(d1 + d2);
+    message += " DOUBLES! You get a FREE TURN!";
+    counter = 0;
+    console.log(counter);
+  }
     move(playerData, diceTotal);
+    checkTrap();
+  } else {
+    move(player2Data, diceTotal);
+    checkTrap();
   }
   $status.text(message);
 }
+
+var checkTrap = function () {
+  console.log('checking trap');
+  console.log('player1trap?='+playerData.position);
+  console.log('player2trap?='+player2Data.position);
+  for (i= 0; i<trap.length; i++) {
+    if (playerData.position ==  trap[i]) {
+      alert('go back 2 spaces');
+      move(playerData, -2);
+    }
+    if (player2Data.position == trap[i]) {
+      alert('go back 2 spaces');
+      move(player2Data, -2);
+    }
+
+  }
+};
+
 
 
   // target #player, change it's position

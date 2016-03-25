@@ -1,5 +1,4 @@
 body {
-  background-image: url("http://i.imgur.com/NKAcL28.jpg");
   font-family: futura;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -7,13 +6,17 @@ body {
 }
 
 #player {
-background: url("http://i.imgur.com/9nPTWsT.jpg?1");
-background-repeat: no-repeat;
+  background: url("http://i.imgur.com/5e6hhHB.png?2");
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
 }
 
 #player2 {
-background: url("http://i.imgur.com/9nPTWsT.jpg?1");
-background-repeat: no-repeat;
+  background: url("http://i.imgur.com/YYCZOvu.jpg?1");
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
 }
 
 div.dice{
@@ -27,9 +30,10 @@ div.dice{
 }
 
 .squares {
-  height: 80px;
-  width: 80px;
+  height: 150px;
+  width: 150px;
   float: left;
+  background: url("http://i.imgur.com/dNrFLjq.jpg?1");
 }
 
 #container {
@@ -37,11 +41,10 @@ div.dice{
 }
 
 #square1 {
-  background-color: red;
+  background-image: url("http://i.imgur.com/dNrFLjq.jpg");
 }
 
 #square2 {
-  background-color: blue;
 }
 
 #square3 {
@@ -181,6 +184,59 @@ div.dice{
   background-color: blue;
 }
 
+#square37{
+  background-color: red;
+}
 
+#square38{
+  background-color: blue;
+}
 
+#square39{
+  background-color: red;
+}
+
+#square40{
+  background-color: blue;
+}
+
+#square41{
+  background-color: red;
+}
+
+#square42{
+  background-color: blue;
+}
+
+#square43{
+  background-color: red;
+}
+
+#square44{
+  background-color: blue;
+}
+
+#square45{
+  background-color: red;
+}
+
+#square46{
+  background-color: blue;
+}
+
+#square47{
+  background-color: red;
+}
+
+#square48{
+  background-color: blue;
+}
+
+#square49{
+  background-color: red;
+}
+
+#square50{
+  background-color: blue;
+}
 
