@@ -95,7 +95,7 @@ function rollDice(){
   if (counter%2 === 0) {
     if(d1 === d2 ) {
     console.log(d1 + d2);
-    message += " DOUBLES! You get a FREE TURN!";
+    message += " ";
     counter = 0;
     console.log(counter);
   }
