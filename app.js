@@ -62,7 +62,6 @@ function randomNumber() {
 }
 
 
-
 var counter = 1;
 
 var move = function(player, diceTotal) {
@@ -122,9 +121,10 @@ var checkTrap = function () {
       alert('go back 2 spaces');
       move(player2Data, -2);
     }
-
   }
 };
+
+
 
 
   // target #player, change it's position

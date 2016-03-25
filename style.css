@@ -1,3 +1,15 @@
+@media screen and (max-width: 500px) {
+    #pagewrap {
+        width: 94%;
+    }
+    #content {
+        width: 65%;
+    }
+    #sidebar {
+        width: 30%;
+    }
+}
+
 body {
   font-family: futura;
   background-repeat: no-repeat;
@@ -13,7 +25,7 @@ body {
 }
 
 #player2 {
-  background: url("http://i.imgur.com/YYCZOvu.jpg?1");
+  background: url("http://i.imgur.com/H9hEiEI.jpg?1");
   background-repeat: no-repeat;
   height: 50px;
   width: 50px;
@@ -30,8 +42,8 @@ div.dice{
 }
 
 .squares {
-  height: 150px;
-  width: 150px;
+  height: 120px;
+  width: 120px;
   float: left;
   background: url("http://i.imgur.com/dNrFLjq.jpg?1");
 }
