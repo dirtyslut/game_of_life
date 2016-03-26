@@ -4,23 +4,23 @@ console.log('it is a working thing!');
 $('#start').on('click', function() {
    playerData.name = window.prompt('First Player Enter Name');
    $('#player').text(playerData.name);
-  });
+});
 
 $('#start2').on('click', function() {
   player2Data.name = window.prompt('Second Player Enter Name');
   $('#player2').text(player2Data.name);
-  });
+});
 
 var gameStart = false;
 
 $('#startGame').on('click', function() {
   if (!gameStart) {
-  console.log(playerData.position);
-  playerData.position = 1;
-  player2Data.position = 1;
-  $('#square1').append(playerData.piece);
-  $('#square1').append(player2Data.piece);
-  gameStart = true;
+    console.log(playerData.position);
+    playerData.position = 1;
+    player2Data.position = 1;
+    $('#square1').append(playerData.piece);
+    $('#square1').append(player2Data.piece);
+    gameStart = true;
   }
 
 });
@@ -94,18 +94,18 @@ function rollDice(){
   var message = "You rolled " + diceTotal + ".";
   if (counter%2 === 0) {
     if(d1 === d2 ) {
-    console.log(d1 + d2);
-    message += " ";
-    counter = 0;
-    console.log(counter);
-  }
-    move(playerData, diceTotal);
-    checkTrap();
-  } else {
-    move(player2Data, diceTotal);
-    checkTrap();
-  }
-  $status.text(message);
+      console.log(d1 + d2);
+      message += " ";
+      counter = 0;
+      console.log(counter);
+    }
+      move(playerData, diceTotal);
+      checkTrap();
+    } else {
+      move(player2Data, diceTotal);
+      checkTrap();
+    }
+    $status.text(message);
 }
 
 var checkTrap = function () {
@@ -133,11 +133,3 @@ var checkTrap = function () {
 
 // for player one's dicetotal, move player to square ___
 // correspond squares to number rolled from dice
-
-
-
-
-
-
-
-

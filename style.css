@@ -1,13 +1,13 @@
 @media screen and (max-width: 500px) {
-    #pagewrap {
-        width: 94%;
-    }
-    #content {
-        width: 65%;
-    }
-    #sidebar {
-        width: 30%;
-    }
+  #pagewrap {
+    width: 94%;
+  }
+  #content {
+    width: 65%;
+  }
+  #sidebar {
+    width: 30%;
+  }
 }
 
 body {
@@ -68,79 +68,79 @@ div.dice{
   background-color: blue;
 }
 
-#square5{
+#square5 {
   background-color: red;
 }
 
-#square6{
+#square6 {
   background-color: blue;
 }
 
-#square7{
+#square7 {
   background-color: red;
 }
 
-#square8{
+#square8 {
   background-color: blue;
 }
 
-#square9{
+#square9 {
   background-color: red;
 }
 
-#square10{
+#square10 {
   background-color: blue;
 }
 
-#square11{
+#square11 {
   background-color: red;
 }
 
-#square12{
+#square12 {
   background-color: blue;
   f
 }
 
-#square13{
+#square13 {
   background-color: red;
 }
 
-#square14{
+#square14 {
   background-color: blue;
 }
 
-#square15{
+#square15 {
   background-color: red;
 }
 
-#square16{
+#square16 {
   background-color: blue;
 }
 
-#square17{
+#square17 {
   background-color: red;
 }
 
-#square18{
+#square18 {
   background-color: blue;
 }
 
-#square19{
+#square19 {
   background-color: red;
 }
 
-#square20{
+#square20 {
   background-color: blue;
 }
 
-#square21{
+#square21 {
   background-color: red;
 }
 
-#square22{
+#square22 {
   background-color: blue;
 }
-
+/*etc*/
 #square23{
   background-color: red;
 }
